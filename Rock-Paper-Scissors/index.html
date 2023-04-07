@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h5>
+        Rock Paper Scissors
+    </h5>
+    <div class="button-container">
+        <button onclick="
+
+                const randomNumber =Math.floor(Math.random()*3)+1;
+
+                if(randomNumber == 1)
+                    computerMove = 'Rock';
+                else if(randomNumber == 2)
+                    computerMove = 'Paper'
+                else
+                    computerMove = 'Scissors';
+
+                console.log(computerMove);
+
+                let result = '';
+                if(computerMove == 'Rock')
+                    result = 'Tie';
+                else if(computerMove == 'Paper')
+                    result = 'Lose';
+                else if(computerMove == 'Scissors')
+                    result = 'Win';
+
+                alert(`You picked rock. Computer pickked ${computerMove}. ${result}`);
+            ">
+            Rock
+        </button>
+
+        <button onclick="
+                randomNumber =Math.floor(Math.random()*3)+1;
+
+                if(randomNumber == 1)
+                    computerMove = 'Rock';
+                else if(randomNumber == 2)
+                    computerMove = 'Paper'
+                else
+                    computerMove = 'Scissors';
+
+                if(computerMove == 'Rock')
+                    result = 'Win';
+                else if(computerMove == 'Paper')
+                    result = 'Tie';
+                else if(computerMove == 'Scissors')
+                    result = 'Lose';
+
+                alert(`You picked Paper. Computer pickked ${computerMove}. ${result}`);
+            ">
+            Paper 
+        </button>
+        <button onclick="
+                randomNumber =Math.floor(Math.random()*3)+1;
+
+                if(randomNumber == 1)
+                    computerMove = 'Rock';
+                else if(randomNumber == 2)
+                    computerMove = 'Paper'
+                else
+                    computerMove = 'Scissors';
+
+                if(computerMove == 'Rock')
+                    result = 'Lose';
+                else if(computerMove == 'Paper')
+                    result = 'Win';
+                else if(computerMove == 'Scissors')
+                    result = 'Tie';
+
+                alert(`You picked Scissors. Computer pickked ${computerMove}. ${result}`);
+            ">
+            Scissors 
+        </button>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
