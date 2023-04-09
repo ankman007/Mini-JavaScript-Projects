@@ -5,21 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="domproject.css">
 </head>
 <body>
-    <h4>YouTube Subscribe Button</h4>
-    <button onclick="
-        subscribe();
-    " class="subscribe-button">Subscribe</button>
+    <div class="container">
 
-    <h4>Rock Paper Scissors</h4>
-    <a href="#">Click Here</a>
+        <div>
+            <h4>YouTube Subscribe Button</h4>
+            <button onclick="
+                subscribe();
+            " class="subscribe-button">Subscribe</button>
+        </div>
 
+    
+        <div>
+            <h4>Amazon Shipping Calculator</h4>
+            <div class="paragraph">
+                <p>Orders under $40 = +$10 shipping</p>
+                <p>Orders over $40 = FREE shipping</p>
+            </div>
+            <input placeholder="Cost of Order" type="text" class="cost-input" onkeydown="
+                handleCostKeydown(event);
+            ">
+            <button class="calculate-button" onclick="
+                calculateTotal();
+            ">Calculate</button>
+            <p class="total-cost"></p>
+        </div>
 
-    <h4>Amazon Shipping Calculator</h4>
-    <input type="text">
-    <button>Calculate</button>
+        <div>
+            <h4>Rock Paper Scissors</h4>
+            <a href="#">Click Here</a>
+        </div>
+
+    </div>
+
     <script>
         function subscribe(){
             const buttonElement = document.querySelector('.subscribe-button');
@@ -28,6 +48,22 @@
                 buttonElement.innerText = 'Subscribed';
             else
                 buttonElement.innerText = 'Subscribe';
+        }
+        function handleCostKeydown(event){
+            if (event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+        function calculateTotal(){
+            const inputElement = document.querySelector('.cost-input');
+            let cost = Number(inputElement.value);
+
+            if (cost < 40) {
+                // cost += 3;
+                cost = cost + 10;
+            }
+
+            document.querySelector('.total-cost').innerHTML = `$${cost}`;
         }
     </script>
 </body>
