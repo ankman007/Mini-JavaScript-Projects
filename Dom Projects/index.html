@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Project</title>
-    <link rel="stylesheet" href="domproject.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-
         <div>
             <h4>YouTube Subscribe Button</h4>
             <button onclick="
@@ -17,7 +16,6 @@
             " class="subscribe-button">Subscribe</button>
         </div>
 
-    
         <div>
             <h4>Amazon Shipping Calculator</h4>
             <div class="paragraph">
@@ -37,34 +35,7 @@
             <h4>Rock Paper Scissors</h4>
             <a href="#">Click Here</a>
         </div>
-
     </div>
-
-    <script>
-        function subscribe(){
-            const buttonElement = document.querySelector('.subscribe-button');
-
-            if(buttonElement.innerText === 'Subscribe')
-                buttonElement.innerText = 'Subscribed';
-            else
-                buttonElement.innerText = 'Subscribe';
-        }
-        function handleCostKeydown(event){
-            if (event.key === 'Enter'){
-                calculateTotal();
-            }
-        }
-        function calculateTotal(){
-            const inputElement = document.querySelector('.cost-input');
-            let cost = Number(inputElement.value);
-
-            if (cost < 40) {
-                // cost += 3;
-                cost = cost + 10;
-            }
-
-            document.querySelector('.total-cost').innerHTML = `$${cost}`;
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
