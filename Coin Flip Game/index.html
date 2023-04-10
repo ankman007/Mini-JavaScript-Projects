@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin Flip Game</title>
 </head>
-<body>
-    <div class="button-container">
+<body>    
+    <div class="container">
+        <h4>Coin Filp Game</h4>
         <button onclick="
                 checkResult('heads');
             ">
@@ -20,11 +21,17 @@
             tails
         </button>
 
+        <p class="result"></p>
+
+        <p class="moves"></p>
+
+        <p class="score"></p>
+
         <button onclick="
                 score.wins = 0;
                 score.losses = 0;
                 localStorage.removeItem('score');
-                console.log(score);
+                updateScore();
             ">
             Reset Score
         </button>
@@ -35,26 +42,38 @@
             wins: 0,
             losses: 0
         }
+        
+
         function checkResult(choice){
             console.log(coinFlip());
             let res = coinFlip(); 
-            
+            let outcome;
+
             if (res === choice){
                 score.wins += 1;
-                alert(`You choose ${choice} and coin flip was also ${res}. You Won!! 
-Wins: ${score.wins}, Losses: ${score.losses}`);
+                outcome = 'win';
             }
-
-            else{
+            else if (res !== choice){
                 score.losses += 1;
-                alert(`You choose ${choice} but coin flp was ${res}. You Lose!!
-Wins: ${score.wins}, Losses: ${score.losses}`);
+                outcome = 'lose';
             }
             
             console.log(score);
             localStorage.setItem('score', JSON.stringify(score));
-        }
 
+            document.querySelector('.result').innerHTML = `You ${outcome}!!`;
+
+            document.querySelector('.moves')
+                .innerHTML = `You choose ${choice} - Coin Filp was ${res}`;
+
+            updateScore();
+
+        }
+        function updateScore(){
+            document.querySelector('.score')
+                .innerHTML = `Wins: ${score.wins} | Losses: ${score.losses}`;
+        }
+        
         function coinFlip(){
             let coinFlip = Math.floor(Math.random()*2)+1;
             if(coinFlip === 1)
@@ -63,6 +82,9 @@ Wins: ${score.wins}, Losses: ${score.losses}`);
                 coinFlip = 'tails';
             
             return coinFlip;
+        }
+        function finalMessage(){
+            
         }
     </script>
 </body>
