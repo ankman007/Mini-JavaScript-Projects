@@ -8,7 +8,7 @@ This repo is aimed at beginners who have a basic understanding of Web Developmen
 
 ## Contributing
 
-You can contribute to this repository by adding new Java projects or improving existing ones. 
+You can contribute to this repository by adding new JavaScript projects or improving existing ones. 
 
 Here are some instructions to follow before making a pull request:
 
