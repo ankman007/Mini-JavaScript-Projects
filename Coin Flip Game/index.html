@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>    
     <div class="container">
         <h4>Coin Filp Game</h4>
-        <button onclick="
+        <button class="choice-button button" onclick="
                 checkResult('heads');
             ">
-            heads
+            Heads
         </button>
 
-        <button onclick="
+        <button class="choice-button button" onclick="
                 checkResult('tails')
             ">
-            tails
+            Tails
         </button>
 
         <p class="result"></p>
@@ -27,7 +28,7 @@
 
         <p class="score"></p>
 
-        <button onclick="
+        <button class="reset-button button" onclick="
                 score.wins = 0;
                 score.losses = 0;
                 localStorage.removeItem('score');
