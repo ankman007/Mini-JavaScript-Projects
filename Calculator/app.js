@@ -1,1 +1,1 @@
-document.querySelector(''.button').
+document.querySelectorAll('.button');
