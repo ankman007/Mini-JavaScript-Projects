@@ -30,7 +30,7 @@ Here are some instructions to follow before making a pull request:
 - Commit your changes and make a new pull request. Please provide a detailed description of the changes you've made and why you've made them.
 ## Guidelines for Contributions
 
-- Make sure your contribution aligns with the goal of this repository, which is to provide beginner-friendly Java projects.
+- Make sure your contribution aligns with the goal of this repository, which is to provide beginner-friendly JavaScript projects.
 
 - Make sure your code is well-documented and easy to understand.
 
