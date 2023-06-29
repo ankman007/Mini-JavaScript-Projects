@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #welcome-section{
+            height: 100vh;
+        }
+        #main-doc {
+            margin-top: 50px;
+        }
+
+        .main-section {
+            padding: 20px;
+        }
+
+        /* Media queries */
+        @media (max-width: 768px) {
+            /* Styles for screens up to 768px wide */
+            #navbar {
+                text-align: center;
+            }
+
+            .nav-link {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .main-section {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Styles for screens up to 480px wide */
+            #navbar {
+                font-size: 14px;
+            }
+
+            .main-section {
+                padding: 5px;
+            }
+
+            code {
+                font-size: 12px;
+            }
+
+            ul {
+                font-size: 12px;
+            }
+        }
+        #navbar{
+            position: fixed;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#projects">Projects</a>
+    </nav>
+    <div id="welcome-section">
+        <h1>Welcome</h1>
+        <div id="projects">
+            <div class="project-title">
+                Title
+            </div>
+            <a    id="technical-doc" 
+          class="project project-tile"
+          href="https://codepen.io/candytale55/pen/RXVWZj"
+          target="_blank">
+        <img  src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg"
+             alt="Tribute page project snapshot">
+              <p class="project-title">
+          <span class="thingies">&lt;</span>
+          Technical Documentation
+          <span class="thingies">&#47;&gt;</span>
+        </p>
+
+      </a> 
+            <div class="project-title">
+                Title
+            </div>
+            <div class="project-title">
+                Title
+            </div>
+            <a href="#">Product Landing Page</a>
+        </div>
+    </div>
+    <a href="https://www.freecodecamp.org/ankeet007" target="_blank" id="profile-link"></a>
+
+</body>
+</html>
