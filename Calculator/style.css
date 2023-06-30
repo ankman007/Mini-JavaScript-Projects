@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    /* background: black; */
+}
+#calculator-ui{
+    background: black;
+    border-radius: 39px;
+    height: 710px;
+    width: 385px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Oswald", sans-serif;
+}
+#calculator-ui hr{
+    height: 2px;
+    width: 120px ;
+    background: white;
+    border-radius: 5px;
+}
+#input-section input{
+    background: black;
+    color: white;
+    border: none;
+    width: 380px;
+    height: 140px;
+    /* border: white 1px solid; */
+    /* text-align: right; */
+    font-size: 60px;
+    font-weight: 100;
+    display: flex;
+    text-align: right;
+    justify-content: baseline;
+}
+#input-section input:focus{
+    outline: none;
+}
+#input-section input::placeholder{
+    color: white;
+    margin: 10px;
+    border: none;
+}
+.row{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+.row button{
+    border-radius: 50%;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.row .number{
+    background: #696969;  
+    color: white; 
+}
+.arithmetic-operation{
+    background: #dea109;
+    color: white;
+}
+.logic-btn{
+    background: #D3D3D3;
+}
+#zero{
+    flex-grow: 1;
+    border-radius: 50px;
+}
